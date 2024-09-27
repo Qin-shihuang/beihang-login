@@ -20,6 +20,7 @@ hex = "0.4.3"
 hmac = "0.12.1"
 md-5 = "0.10.6"
 native-tls = { optional = true, version = "*" }
+openssl = { version = "0.10.35", optional = true, features = ["vendored"] }
 serde = { version = "1.0.193", features = ["derive"] }
 serde_json = "1.0.108"
 sha1 = "0.10.6"
@@ -35,3 +36,4 @@ url = "2.5.0"
 default = ["native-tls"]
 native-tls = ["dep:native-tls", "ureq/native-tls"]
 rustls = ["ureq/tls"]
+openssl = ["dep:openssl"]
